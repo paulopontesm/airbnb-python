@@ -78,7 +78,7 @@ api.get_calendar(975964, starting_month=9, starting_year=2017, calendar_months=1
 ```
 
 ### Get listing reviews
- 
+
 ```python
 api.get_reviews(listing_id)
 ```
@@ -155,8 +155,6 @@ pipenv install --dev
 Finally, run the doctests using nose:
 
 ```bash
-nosetests --with-doctest
+python -m pytest --doctest-modules -v ./airbnb
 
 ```
-
-[![Build Status](https://travis-ci.org/nderkach/airbnb-python.svg)](https://travis-ci.org/nderkach/airbnb-python)
