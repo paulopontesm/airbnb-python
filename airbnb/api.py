@@ -139,9 +139,9 @@ class Api(object):
             )
 
             if r.status_code == 420:
-                raise VerificationError
+                raise VerificationError(r.text)
             elif r.status_code == 403:
-                raise AuthError
+                raise AuthError(r.text)
 
             self._access_token = r.json()["login"]["id"]
 
